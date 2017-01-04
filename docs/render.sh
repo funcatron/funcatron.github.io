@@ -1,5 +1,5 @@
 #!/bin/sh
-# adoc2pdf *.adoc
+# render.sh *.adoc
 
 program=$(basename $0)
 dir=$(dirname $0)
@@ -15,12 +15,12 @@ fi
 
 build="rendered"
 resources="./resources"
-# stylesdir="$resources/themes"
-# fontsdir="$resources/fonts"
 imagesdir="$resources/images"
 stylesdir="$resources/css"
 
 echo "Making HTML5 in $build/"
+rm -rf "$build"
+
 if [ -d "$imagesdir" ]; then
     mkdir -p "$build/images"
     cp -a "$imagesdir" "$build/"
@@ -40,4 +40,4 @@ attrs="$attrs --attribute stylesheet=funcatron-adoc.css"
 asciidoctor --require=asciidoctor-diagram --destination-dir="$build" \
             $attrs $sources
 
-ls -1 $build/*.html
+ls -1 "$build"/*.html
