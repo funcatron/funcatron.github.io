@@ -1,0 +1,12 @@
+= Funcatron Documentation image:logo2.png[]
+
+
+== Repo specific documentation
+
+* link:funcatron[funcatron]: The main Funcatron Repo
+* link:intf[intf]: The Interfaces that a Func must implement
+
+== Resources
+
+* https://funcatron.org/[Funcatron Home Page]
+* https://blog.goodstuff.im/funcatron_mesos_now[DPP's Blog: Funcatron on Mesos]
